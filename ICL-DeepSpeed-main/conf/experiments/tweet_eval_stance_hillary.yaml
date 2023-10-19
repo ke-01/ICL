@@ -1,0 +1,8 @@
+task: tweet_eval_stance_hillary
+tag: direct_w_template
+template: "Tweet:[S1] Sentiment: [BOL][Label]"
+verbalizer:
+  0 : " none"
+  1 : " against"
+  2 : " favor"
+demo_sep: " "

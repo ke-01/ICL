@@ -1,0 +1,5 @@
+name: gpt2-large
+model_name_or_path: gpt2-large
+bol_token: "BoLToKen"
+add_bol_to_special_token: true
+hidden_size: 1280

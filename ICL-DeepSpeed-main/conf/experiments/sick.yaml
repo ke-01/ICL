@@ -1,0 +1,8 @@
+task: sick
+tag: direct_w_template
+template: "[S1] The question is:[S2] True or False? Answer:[BOL][Label]"
+verbalizer: 
+  0 : " True"
+  1 : " Not sure"
+  2 : " False"
+demo_sep: " "

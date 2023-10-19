@@ -1,0 +1,7 @@
+task: disability
+tag: direct_w_template
+template: "There is a hate based on disability in [S1] True or False? Answer:[BOL][Label]"
+verbalizer:
+  0 : " False"
+  1 : " True"
+demo_sep: " "

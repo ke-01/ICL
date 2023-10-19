@@ -1,0 +1,25 @@
+seed: 227
+demo_accuracy: 1
+k: 8
+
+data_base: data
+#train_path: ./${data_base}/${experiments.task}/k-${k}-seed-${seed}/train.jsonl
+#test_path: ./${data_base}/${experiments.task}/k-${k}-seed-${seed}/test.jsonl
+
+train_path: ./${data_base}/${experiments.task}/k-${k}-seed-${seed}/
+test_path: ./${data_base}/${experiments.task}/k-${k}-seed-${seed}/test.jsonl
+
+output_base: outputs
+output_path: ./${output_base}/${models.name}/${experiments.task}/${experiments.tag}
+
+threshold: 0.5
+top_n: 3
+
+hydra:
+  run:
+    dir: ./${output_base}/${models.name}/${experiments.task}/${experiments.tag}
+defaults:
+  - models: gpt2-xl
+  - experiments: cola
+  - ds_configs: single3
+  - _self_

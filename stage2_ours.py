@@ -42,8 +42,13 @@ print('data_type:{}'.format(data_type))
 print('llm_model:{}'.format(llm_model))
 print('threshold:{}'.format(threshold))
 
+# bm25
 with open(str(data_type)+'_stage13_new.json', 'r', encoding='utf8')as f:
     stage_1_index = json.load(f)
+
+# sentbert
+# with open(str(data_type)+'_stage13_new.json', 'r', encoding='utf8')as f:
+#     stage_1_index = json.load(f)
 
 if data_type=='sick':
     dataset = load_from_disk('./rawdata/sick')
@@ -85,8 +90,8 @@ elif llm_model=='gpt2-large':
     tokenizer = AutoTokenizer.from_pretrained('gpt2-large')
     model = AutoModelForCausalLM.from_pretrained('gpt2-large', torch_dtype=torch.float32).to(device)
 elif llm_model=='gpt2-xl':
-    tokenizer = AutoTokenizer.from_pretrained('/new_disk2/kepu_zhang/pretrain_model/gpt2-xl')
-    model = AutoModelForCausalLM.from_pretrained('/new_disk2/kepu_zhang/pretrain_model/gpt2-xl', torch_dtype=torch.float32).to(device)
+    tokenizer = AutoTokenizer.from_pretrained('gpt2-xl')
+    model = AutoModelForCausalLM.from_pretrained('gpt2-xl', torch_dtype=torch.float32).to(device)
 
 model = model.eval()
 # for name, _ in model.named_parameters():

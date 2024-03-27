@@ -5,7 +5,7 @@ This is the official implementation of the paper "Effective In-Context Example S
 Check the following instructions for reproducing experiments.
 
 ### Quick Start
-#### 1. Get the BM25 results.
+#### 1. Get the BM25 or sentence-bert results.
 
 #### 2. Get our results.
 

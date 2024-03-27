@@ -10,10 +10,12 @@ Check the following instructions for reproducing experiments.
 #### 2. Get our results.
 
 #### Step 1：
-You can get the results of BM25.
+You can get the results of BM25 or sentence-bert.
 
 ```bash
 python stage1_bm25.py
+
+python stage1_sentbert.py
 ```
 
 #### Step 2：
